@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentArchiverAPI", "DocumentArchiverAPI\DocumentArchiverAPI.csproj", "{E579E15A-2DE6-4204-83BE-3A6EC4C7EDA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityCoreAPI", "..\IdentityCoreAPI\IdentityCoreAPI\IdentityCoreAPI.csproj", "{A849C2E4-18BD-4CF9-9E9E-D85793AADDDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E579E15A-2DE6-4204-83BE-3A6EC4C7EDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E579E15A-2DE6-4204-83BE-3A6EC4C7EDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E579E15A-2DE6-4204-83BE-3A6EC4C7EDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E579E15A-2DE6-4204-83BE-3A6EC4C7EDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A849C2E4-18BD-4CF9-9E9E-D85793AADDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A849C2E4-18BD-4CF9-9E9E-D85793AADDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A849C2E4-18BD-4CF9-9E9E-D85793AADDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A849C2E4-18BD-4CF9-9E9E-D85793AADDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C966D934-BE2E-42F2-81C3-E1DA96187222}
+	EndGlobalSection
+EndGlobal

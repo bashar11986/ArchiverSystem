@@ -1,0 +1,15 @@
+﻿// i installed this packages:
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 8.0.1
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.AspNetCore.Authentication.JwtBearer -Version 8.0.1
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection
+
+//for current project in a solution
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 8.0.1 -Project projectname
+
+// error in migration becaus not the same packages i installed, so run this
+//1. in myproject.csproj: edit version to the same version like 8.0.1
+//2. run this:
+dotnet clean
+dotnet restore
+dotnet build
