@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace DocumentArchiverAPI.Extentions
 {
@@ -16,15 +15,16 @@ namespace DocumentArchiverAPI.Extentions
                 o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;   // other schemes in services have to work on jwtbearerschema
             }).AddJwtBearer(o =>
             {
-                o.RequireHttpsMetadata = false; // if true, it runs on just https
-                o.SaveToken = true;
+                o.Authority = "https://localhost:7011"; // عنوان IdentityCoreAPI
+                                                        // o.RequireHttpsMetadata = false; // if true, it runs on just https
+                                                        // o.SaveToken = true;
                 o.TokenValidationParameters = new TokenValidationParameters()  // validate parameters in configuration file : Issuer, Audience ..
                 {
-                    ValidateIssuer = true,
-                    ValidIssuer = conf["JWT:Issuer"],
+                    //ValidateIssuer = true,
+                    //  ValidIssuer = conf["JWT:Issuer"],
                     ValidateAudience = false,
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(conf["JWT:SecretKey"]))
+                    // ValidateIssuerSigningKey = true,
+                    // IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(conf["JWT:SecretKey"]))
                 };
             });
         }

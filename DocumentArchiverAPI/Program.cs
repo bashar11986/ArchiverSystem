@@ -33,6 +33,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 
 
 builder.Services.AddCustomJwtAuth(builder.Configuration);
+
+//builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 
@@ -47,8 +49,44 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+
+
+
+//var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
+//  builder.Configuration.GetConnectionString("DefaultConnection")
+//   ));
+
+//builder.Services.AddAuthentication("Bearer")
+//    .AddJwtBearer("Bearer", options =>
+//    {
+//        options.Authority = "https://localhost:7011";
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateAudience = false
+//        };
+//    });
+
+//builder.Services.AddAuthorization();
+//builder.Services.AddControllers();
+
+//var app = builder.Build();
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+//app.UseAuthentication();
+//app.UseAuthorization();
+
+//app.MapControllers();
+
+//app.Run();
