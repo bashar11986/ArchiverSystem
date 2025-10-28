@@ -3,3 +3,14 @@
 ################################################################################
 
 /DocumentArchiverAPI/appsettings.Development.json
+# Ignore Visual Studio temporary files
+.vs/
+# Build
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.dbmdl
+*.log
+*.tlog

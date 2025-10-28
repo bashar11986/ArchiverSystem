@@ -1,0 +1,2 @@
+﻿Install-Package Duende.IdentityServer -Project IdentityCoreAPI
+Install-Package Duende.IdentityServer.Test -Project IdentityCoreAPI
