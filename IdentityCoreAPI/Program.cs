@@ -17,13 +17,14 @@ op.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")))
 builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddCustomJwt(builder.Configuration);
+//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGenJwtAuth();  // AddSwaggerGen exist here in AddSwaggerGenJwtAuth
+builder.Services.AddCustomJwt(builder.Configuration);// AddAuthentication exist here in AddCustomJwt
 
 
 
-//builder.Services.AddAuthentication();
-builder.Services.AddAuthorization();
+//builder.Services.AddAuthentication();   //authorize by token
+builder.Services.AddAuthorization();     // login authorize
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>

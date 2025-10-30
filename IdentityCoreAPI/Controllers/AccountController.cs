@@ -15,10 +15,12 @@ namespace IdentityCoreAPI.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IConfiguration _configuration;
-        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration)
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _roleManager = roleManager;
 
         }
         [HttpPost("NewUser")]
@@ -83,5 +85,7 @@ namespace IdentityCoreAPI.Controllers
             }
             return BadRequest(ModelState);
         }
+       
+
     }
 }
